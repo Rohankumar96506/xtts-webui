@@ -80,6 +80,7 @@ def infer_rvc(pitch, index_rate, protect_voiceless, method, index_path, model_pa
     try:
         cmd = [
             'python', '-m', 'rvc_python',
+            '-h', 'cli',
             '--input', input_path,
             '--model', index_path,
             '--pitch', str(pitch),
