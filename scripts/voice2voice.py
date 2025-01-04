@@ -79,7 +79,7 @@ def infer_rvc(pitch, index_rate, protect_voiceless, method, index_path, model_pa
     model_path = str(model_path)
     try:
         cmd = [
-            'venv/rvc_venv/bin/python', '-m', 'rvc_python',
+            'python', '-m', 'rvc_python',
             '--input', input_path,
             '--model', index_path,
             '--pitch', str(pitch),
@@ -122,7 +122,7 @@ def infer_rvc_batch(model_name,pitch, index_rate, protect_voiceless, method, ind
 
     try:
         cmd = [
-            'venv/rvc_venv/bin/python', '-m', 'rvc_python',
+            'python', '-m', 'rvc_python',
             '--dir', temp_dir,
             '--model', index_path,
             '--pitch', str(pitch),
@@ -154,7 +154,7 @@ def infer_rvc_batch(model_name,pitch, index_rate, protect_voiceless, method, ind
 def infer_openvoice(input_path, ref_path, output_path):
     try:
         cmd = [
-            'venv/rvc_venv/bin/python', '-m', 'openvoice_cli', "single",
+            'python', '-m', 'openvoice_cli', "single",
             '-i', input_path,
             '-r', ref_path,
             '-o', output_path,
